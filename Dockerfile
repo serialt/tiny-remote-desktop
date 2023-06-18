@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:latest
 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk update
@@ -14,7 +14,7 @@ ADD entry.sh /entry.sh
 RUN chmod +x /entry.sh
 
 ENV DISPLAY :0
-ENV RESOLUTION=1024x768
+ENV RESOLUTION=1920x1080
 
 EXPOSE 5901 6901
 
